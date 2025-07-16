@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Mathématiques</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page de connexion -->
+        <div class="login-page active" id="loginPage">
+            <h1>Quiz de Mathématiques</h1>
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="studentName">Nom de l'élève :</label>
+                    <input type="text" id="studentName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Se connecter</button>
+                <div id="loginError" class="error"></div>
+            </form>
+            <div class="help">
+                <strong>Pour tester :</strong><br>
+                Mot de passe : <code>math2024</code>
+            </div>
+        </div>
+
+        <!-- Page du quiz -->
+        <div class="quiz-page" id="quizPage">
+            <h1>Quiz de Mathématiques</h1>
+            <div id="studentInfo"></div>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div id="timer">Temps restant : --:--</div>
+            <div id="autoSaveStatus" class="auto-save-status"></div>
+            
+            <form id="quizForm">
+                <div id="questionsContainer"></div>
+                <button type="submit">Terminer le quiz</button>
+            </form>
+        </div>
+
+        <!-- Page des résultats -->
+        <div class="results-page" id="resultsPage">
+            <h1>Résultats du Quiz</h1>
+            <div id="studentResults"></div>
+            <div id="detailedResults"></div>
+            <button onclick="window.location.reload()">Nouveau quiz</button>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
